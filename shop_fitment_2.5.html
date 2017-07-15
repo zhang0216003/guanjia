@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>2.5装修</title>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/shop.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="head">
+				<a href="shop.html"><img src="img/shop-pic/nav_btn_back.png" class="shop-pic"/></a>
+				<p class="shop-txt">杭州西子湖四季三星级商务全国连锁</p>
+			</header>
+			<section class="main">
+				<div class="shop-head">
+					<div class="head-pic">
+						<img src="img/shop-pic/headimg.png" class="img"/>
+						<img src="img/shop-pic/dayang.png" class="banner banner-two"/>
+					</div>
+					<div class="head-txt">
+						<img src="img/shop-pic/sign-r.png"/><img src="img/shop-pic/medal.png"/><img src="img/shop-pic/medal1.png"/>
+						<p class="shop-tit">商品<span class="num">22</span>种<span class="bar"><img src="img/shop-pic/4.png"/></span>起送<span class="num"></span>￥0</p>
+					</div>
+					<!--星星图-->
+					<div class="star"></div>
+				</div>
+				<nav class="shop-list">
+					<a href="shop.html" class="shop-nav one active">商品</a>
+					<a href="#" class="shop-nav two active">详情</a>
+					<a href="shop_evaluation.html" class="shop-nav three active">评价</a>
+				</nav>
+				<!--装修-->
+				<div class="fitment">
+					<h6 class="qiu"><img src="img/shop-pic/fit.png"/></h6>
+					<p class="character_1"><a href="#">店铺正在装修，敬请等待～</a></p>
+				</div>
+			</section>
+			
+		</div>
+		<script src="js/jquery.js"></script>
+		<script>
+			//点击li  执行函数
+			$('.shop-nav').click(function(){
+				//注意this不能加引号  
+				//点击当前li  添加类名                           兄弟元素    移除类名
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		</script>
+		<script>
+			//点击li  执行函数
+			$('.item-left-mid-nav').click(function(){
+				//注意this不能加引号  
+				//点击当前li  添加类名                           兄弟元素    移除类名
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>主页</title>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/college.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="head">
+				
+				<input type="text" value="北京体育大学撒方法撒旦发是大三大四的" class="head_school" />				
+				<a href="shop_2.6_cart.html" class="myshop">
+					<span class="head_map"><img src="img/1.png"/></span>
+					<span class="shop">我的店铺</span>
+				</a>
+			</header>
+			<section class="Sec-main">
+				<div class="banner">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/map.png" class="pic" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/map-19.png" class="pic" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/map.png" class="pic" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/map-19.png" class="pic" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/map.png" class="pic" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/map-19.png" class="pic" />
+							</div>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="ball">
+					<h6 class="qiu"><img src="img/star.png" /></h6>
+					<p class="character1"><a href="#">你所在的学校还没有一个小管家</a></p>
+					<p class="character2"><a href="#">快去申请成为小管家吧</a></p>
+					<h5 class="ste"><a href="chengshi.html">申请成为小管家</a></h5>
+				</div>
+			</section>
+			<footer class="base">
+				<!--<a href="#" class="first">
+					<span class="Home"><img src="img/Home.png"/></span>
+					<span class="page lan">首页</span>
+				</a>
+				<a href="pay.html" class="first">
+					<span class="obj"><img src="img/obj.png"/></span>
+					<span class="page">订单</span>
+				</a>
+				<a href="#" class="first">
+					<span class="obj1"><img src="img/obj1.png"/></span>
+					<span class="page">我的</span>
+				</a>-->
+				<nav>
+					<a href="index.html" class="foot-base">
+						<span class="base-pic Home"></span>
+						<span class="txt cla">首页</span>
+					</a>
+					<a href="shop_myindent.html" class="foot-base">
+						<span class="base-pic obj"></span>
+						<span class="txt">订单</span>
+					</a>
+					<a href="shop_myindent.html" class="foot-base">
+						<span class="base-pic obj1"></span>
+						<span class="txt">我的</span>
+					</a>
+				</nav>
+			</footer>
+		</div>
+		<!-- Swiper JS -->
+		<script src="js/swiper.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.banner .swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				spaceBetween: 30,
+				autopaly: true,
+			});
+		</script>
+	</body>
+
+</html>

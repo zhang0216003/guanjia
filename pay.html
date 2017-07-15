@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>支付方式</title>
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/xiaoyuanguanjia.css"/>
+</head>
+<body>
+	<div class="container">
+		<header class="In-header">
+			<a href="index.html"><img src="img/nav_btn_back.png" class="In-pic"/></a>
+			<h4 class="In-txt ">选择支付方式</h4>
+		</header>
+		<section class="pay-main">
+			<!--订单-->
+			<div class="pay-order">
+				<h1 class="pay-title">
+					订单金额
+				</h1>
+				<span class="cla"><i class="money">￥</i>7</span>
+			</div>
+			<!--选择-->
+			<div class="select">
+				<h2 class="sel">选择支付方式</h2>
+			</div>
+			<!--钱包-->
+			<!--1-->
+			<div class="pay-money">
+				<input type="radio"id="money" name="pay" checked="checked" /> 
+				<label for="money"></label>
+				<h4 class="pay-money-c"><span class="payimg pay_icon_qianbao"></span>钱包</h4>
+				<span class="pay-money-r">余额120.50元</span>
+			</div>
+			<!--2-->
+			<div class="pay-money">
+				<input type="radio"id="mon" name="pay" /> 
+				<label for="mon"></label>
+				<h4 class="pay-money-c"><span class="payimg weixin"></span>微信</h4>
+				<!--<span class="pay-money-r">余额120.50元</span>-->
+			</div>
+			<!--3-->
+			<div class="pay-money">
+				<input type="radio"id="ey" name="pay"/> 
+				<label for="ey"></label>
+				<h4 class="pay-money-c"><span class="payimg zhifu"></span>支付宝</h4>
+				<!--<span class="pay-money-r">余额120.50元</span>-->
+			</div>
+		</section>
+		<footer class="base">
+			<h3 class="base-txt">确认付款</h3>
+		</footer>
+	</div>
+</body>
+</html>

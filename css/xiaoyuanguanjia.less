@@ -1,0 +1,329 @@
+@import url(reset.css); //封装 宽高背景 属性
+.whb(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+//封装弹性盒
+.box(@ver:horizontal) {
+    display: -webkit-box; //将父元素设置成弹性盒布局
+    -webkit-box-orient: @ver; //设置子元素的排列方式
+}
+@myblue: #4194f0; //背景颜色
+@fontcolor: #999999; //字体颜色
+//设置根元素100%宽高
+html,
+body,
+.container {
+    .full;
+}
+.full {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+//以上为公共样式
+.container {
+    .box(vertical);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    .In-header {
+        .box;
+        .whb(100%,.88rem,@myblue);
+        line-height: 0.88rem;
+        .In-pic {
+            .whb(.32rem,auto,none);
+            margin-left: 0.3rem;
+        }
+        .In-txt {
+            -webkit-box-flex: 1;
+            color: #fff;
+            font-size: 0.34rem;
+            text-align: center;
+            margin-right: 1.3rem;
+        }
+    }
+    .In-main {
+        .box(vertical);
+        overflow: auto;
+        -webkit-box-flex: 1;
+        background: #f3f2f5;
+        //搜索
+        .In-search {
+            .box;
+            .whb(100%,0.88rem,none);
+            -webkit-box-align: center;
+            line-height: 0.88rem;
+            text-align: center;
+            .In-pu {
+                display: block;
+                -webkit-box-flex: 1;
+                .whb(580px/640px*100%,0.6rem,none);
+                background: #fff url("../img/search-icon.png") no-repeat 0.1rem center;
+                background-size: 0.26rem;
+                border: 0;
+                padding-left: 0.46rem;
+                box-sizing: border-box;
+                border-radius: 0.05rem;
+                margin: 0.14rem auto;
+            }
+            //In-pu
+            .search02 {
+                .whb(82px/640px*100%,0.58rem,#eaeaea);
+                line-height: 0.58rem;
+                display: block;
+                color: #323232;
+                border: 1px solid #d9d9d9;
+                border-radius: 0.07rem;
+                margin-right: 0.3rem;
+            }
+            //search02
+        }
+        //In-search
+        .location {
+            .whb(100%,1.2rem,#fff);
+            .loc {
+                margin-top: 0.24rem;
+                color: #999999;
+                font-size: 0.23rem;
+                background: url("../img/posi.png") no-repeat 0.3rem 0.06rem;
+                background-size: 0.2rem;
+                padding-left: 0.6rem;
+            }
+            .error {
+                font-size: 0.24rem;
+                color: #4194f0;
+                margin-top: 0.17rem;
+                margin-left: 0.6rem;
+            }
+        }
+        //location
+        .In-content {
+            .whb(100%,4.42rem,#fff);
+            .letter {
+                .whb(584px/640px*100%,0.46rem,#f3f2f5);
+                .txtE {
+                    color: #333333;
+                    font-size: 0.23rem;
+                    line-height: 0.46rem;
+                    margin-left: 0.3rem;
+                }
+            }
+            //letter
+            .txt-city {
+                position: relative;
+                .whb(100%,0.98rem,#fff);
+                .txt-city1 {
+                    .box;
+                    .whb(auto,0.98rem,none);
+                    border-bottom: 1px solid #e6e9eb;
+                    margin-left: 0.3rem;
+                    .doss {
+                        -webkit-box-flex: 1;
+                        line-height: 0.98rem;
+                        font-size: 0.24rem;
+                        a {
+                            color: #333333;
+                        }
+                    }
+                    .duihao {
+                        color: @myblue;
+                        line-height: 0.98rem;
+                        font-size: 0.3rem;
+                        margin-right: 0.32rem;
+                    }
+                }
+                //txt-city1
+            }
+            //txt-city
+            //居中定位
+            .location {
+                position: absolute;
+                left: 50%;
+                margin-left: -0.4rem;
+                top: 50%;
+                margin-top: -0.95rem;
+                -webkit-box-align: center;
+                h1 {
+                    .whb(0.8rem,0.8rem,@myblue);
+                    text-align: center;
+                    background: url("../img/radius-2.png") no-repeat;
+                    background-size: 0.8rem;
+                    line-height: 0.8rem;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        //In-content
+        //右定位
+        .location-1 {
+            .whb(0.54rem,6.15rem, none);
+            position: fixed;
+            right: 0;
+            top: 3.34rem;
+            h1 {
+                line-height: 0.3rem;
+                text-align: center;
+                color: #4194f0;
+            }
+        }
+    }
+    //In-main
+}
+//container
+//支付方式部分pay.html
+.pay-main {
+    background: #f2f5f7;
+    -webkit-box-flex: 1;
+    .box(vertical);
+    overflow: auto;
+    border-top: 1px solid #dcdcdc;
+    .pay-order {
+        .box;
+        .whb(100%,0.98rem,#fff);
+        border-bottom: 1px solid #dcdcdc;
+        line-height: 0.98rem;
+        .pay-title {
+            -webkit-box-flex: 1;
+            color: #333333;
+            font-size: 0.27rem;
+            background: url("../img/icon_jine.png") no-repeat 0.3rem center;
+            background-size: 0.34rem;
+            padding-left: 0.85rem;
+        }
+        .cla {
+            color: #4194f0;
+            font-size: 0.27rem;
+            margin-right: 0.3rem;
+            .money {
+                font-size: 0.19rem;
+            }
+        }
+    }
+    //pay-order
+    .select {
+        .whb(100%,0.74rem,#f2f5f7);
+        border-bottom: 1px solid #dcdcdc;
+        .sel {
+            font-size: 0.24rem;
+            color: #646464;
+            margin-top: 0.3rem;
+            margin-left: 0.3rem;
+        }
+        //sel     
+    }
+    //select
+    .pay-money {
+        .whb(100%,0.9rem,#fff);
+        .box;
+        border-bottom: 1px solid #dcdcdc; //      line-height: 0.9rem;       
+        input[type="radio"] {
+            display: none;
+            &+label {
+                margin-left: 0.3rem;
+                margin-top: 0.26rem;
+                display: block;
+                width: 0.38rem;
+                height: 0.38rem;
+                background: url("../img/check-mark.png") no-repeat bottom;
+                background-size: 0.38rem auto;
+            }
+            &:checked+label {
+                background-position: 0 0;
+            }
+        }
+        //钱包部分
+        .pay-money-c {
+            -webkit-box-flex: 1;
+            font-size: 0.27rem;
+            color: #333333;
+            -webkit-box-align: center;
+            //          background: url("../img/object.png") no-repeat 0.24rem center;
+            //          background-size: 0.39rem auto;
+            //          padding-left: 0.89rem;
+            .box;
+            .payimg {
+                background: url("../img/payimg.png") no-repeat;
+                background-size: 20px 54px;
+                display: block;
+                margin-right: 0.26rem;
+                margin-left: 0.26rem;
+            }
+            .zhifu {
+                height: 19px;
+                width: 19px;
+                background-position: 0 0;
+            }
+            .weixin {
+                height: 15px;
+                width: 19px;
+                background-position: 0 -19px;
+            }
+            .pay_icon_qianbao {
+                height: 20px;
+                width: 20px;
+                background-position: 0 -34px;
+            }
+        }
+        //pay-money-c
+        .pay-money-r {
+            line-height: 0.9rem;
+            font-size: 0.24rem;
+            color: #ff0050;
+            margin-right: 0.3rem;
+        }
+        //pay-money-r
+    }
+    //pay-money
+}
+//pay-main
+.base {
+    .whb(580/640*100%,0.85rem,@myblue);
+    //      margin-top: 4.44rem;
+    border: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 0.05rem;
+    .base-txt {
+        text-align: center;
+        line-height: 0.85rem;
+        font-size: 0.3rem;
+        color: #fff;
+    }
+}
+//base
+//选择大学select.html部分
+//未能搜索到学校.school_erroe.html
+.error-school {
+    .whb(100%,9.19rem,#fff);
+    //方法一
+//  position: relative;
+//  .error-pic {
+//      position: absolute;
+//      left: 50%;
+//      margin-left: -1rem;
+//      top: 50%;
+//      margin-top: -1.34rem;
+//  }
+//  .er-txt {
+//      margin-top: 5.8rem;
+//      text-align: center;
+//      color: #d0d0d0;
+//      font-size: 0.27rem;
+//  }
+      //方法二
+     .error-pic {
+       .whb(1.34rem,auto,#fff);
+       margin-left: 254px/640px*100%;
+       margin-top: 226px/919px*100%;
+    }
+    .er-txt {      
+        text-align: center;
+        color: #d0d0d0;
+        font-size: 0.27rem;
+    }
+    
+}
+//error-school
